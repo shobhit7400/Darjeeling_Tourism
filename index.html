@@ -1,0 +1,513 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darjeeling Tourism - Queen of Hills</title>
+    <link rel="stylesheet" href="style.css">
+      <script src="script.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Font Awesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Add this inside <head> tag -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<a href="https://facebook.com/" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+<a href="https://wa.me/919876543210" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+
+    <style>
+      
+    </style>
+</head>
+<body>
+  <!-- Gmail Popup Section -->
+<div id="gmail-popup" style="position: fixed; top: 0; left: 0; height: 100vh; width: 100vw; background: rgba(0,0,0,0.8); display: flex; justify-content: center; align-items: center; z-index: 9999;">
+  <div style="background: white; padding: 30px; border-radius: 10px; text-align: center;">
+    <h3>Enter your Gmail to continue</h3>
+    <input type="email" id="gmailInput" placeholder="Enter your Gmail" style="padding: 10px; width: 250px; margin-top: 10px;" required>
+    <br><br>
+    <button onclick="submitGmail()" style="padding: 8px 16px; background-color: orange; color: white; border: none; border-radius: 5px;">Submit</button>
+  </div>
+</div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="logo">🏔️ Darjeeling Tourism</div>
+            
+      
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+        </div>
+        <div class="made-by">"Darjeeling — Where the Hills Whisper Stories and the Tea Smiles Back."</div>
+        
+        <nav class="navbar">
+            <div class="nav-container">
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#reach">How to Reach</a></li>
+                    <li><a href="#attractions">Attractions</a></li>
+                    <li><a href="#culture">Culture</a></li>
+                    <li><a href="#food">Food</a></li>
+                    <li><a href="#adventure">Adventure</a></li>
+                    <li><a href="#shopping">Shopping</a></li>
+                    <li><a href="#visit">Best Time</a></li>
+                    <a href="#make-payment">Make Payment</a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+<span id="userGmail" style="color: white; margin-left: 20px;"></span>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section class="hero-section">
+  <h1>Welcome to Darjeeling</h1>
+  <p>
+    Queen of Hills awaits you with its breathtaking mountain views, famous tea gardens, and rich cultural heritage. Experience the magic of the Himalayas in this enchanting hill station.
+  </p>
+  <div class="button-container">
+    <a href="javascript:void(0);" class="cta-button" id="openFormBtn">Explore Now</a>
+  </div>
+</section>
+
+
+<!-- Booking Form Section (Initially Hidden) -->
+<section id="booking" class="booking-section" style="display: none; padding: 40px; background: #f2f2f2;">
+  <form class="booking-form" id="bookingForm" style="max-width: 600px; margin: auto;">
+    <h2>Contact for Booking in Darjeeling</h2>
+    <div class="subtitle">with Shobhit Singh</div>
+
+    <input type="text" placeholder="Full Name" required style="width: 100%; margin: 10px 0;">
+    <input type="number" placeholder="Age" min="1" required style="width: 100%; margin: 10px 0;">
+    <input type="email" placeholder="Email" required style="width: 100%; margin: 10px 0;">
+    <input type="tel" placeholder="Phone" required style="width: 100%; margin: 10px 0;">
+    <textarea placeholder="Address" required style="width: 100%; margin: 10px 0;"></textarea>
+
+    <select required style="width: 100%; margin: 10px 0;">
+      <option value="">Hotel Booking?</option>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+
+    <select required style="width: 100%; margin: 10px 0;">
+      <option value="">Transport Type</option>
+      <option value="van">Van</option>
+      <option value="car">Car</option>
+      <option value="bike">Bike</option>
+    </select>
+
+    <select required style="width: 100%; margin: 10px 0;">
+      <option value="">Where You Want Your Hotel</option>
+      <option value="nearmountains">Near Mountains</option>
+      <option value="neartigerhill">Near Tiger Hill</option>
+      <option value="nearhillstation">Near Hill Station</option>
+    </select>
+
+    <input type="number" placeholder="Number of Days to Stay" min="1" required style="width: 100%; margin: 10px 0;">
+    <button type="submit" style="width: 100%; background: orange; color: white; padding: 10px; border: none;">Submit Booking</button>
+  </form>
+</section>
+
+              <section id="reach-section" style="padding: 50px 20px; background: linear-gradient(to right, #2c3e50, #3498db);">
+  <h2 style="text-align:center; color:white; margin-bottom: 30px;">How to Reach Darjeeling</h2>
+  <div class="reach-container">
+    
+
+    <!-- By Air Card with Toggle -->
+<div class="card" onclick="toggleAirImage()">
+  <h3>✈️ By Air</h3>
+  <p><strong>Nearest Airport:</strong> Bagdogra Airport (68 km)<br>
+  Well-connected to major cities like Delhi, Mumbai, and Kolkata. From the airport, you can take a taxi or shared cab to Darjeeling, which takes about 2–3 hours through scenic mountain roads.</p>
+</div>
+
+<!-- Hidden Air Image -->
+<div id="air-image-container" style="display: none; text-align: center; margin-top: 20px;">
+  <span onclick="toggleAirImage()" style="cursor:pointer; color: white; background: red; padding: 5px 10px; border-radius: 5px;">❌ Close</span>
+  <br>
+  <img src="images/Bagdogra.jpg" alt="Bagdogra Airport" class="card-image">
+
+</div>
+
+
+
+   <!-- By Road Card with Toggle -->
+<div class="card" onclick="toggleRoadImage()">
+  <h3>🚙 By Road</h3>
+  <p>
+    <strong>From Siliguri:</strong> Shared jeeps and taxis are available.<br>
+    <strong>Highway:</strong> NH55 (Hill Cart Road)<br>
+    <strong>Travel Time:</strong> 3–4 hours drive
+  </p>
+</div>
+
+<!-- Hidden Road Image -->
+<div id="road-image-container" style="display: none; text-align: center; margin-top: 20px;">
+  <span onclick="toggleRoadImage()" style="cursor:pointer; color: white; background: red; padding: 5px 10px; border-radius: 5px;">❌ Close</span>
+  <br>
+  <img src="images/road.jpg" alt="Road to Darjeeling" class="card-image">
+</div>
+
+
+<!-- Modal for Image -->
+<div id="imageModal" class="modal">
+  <span class="close" onclick="closeImage()">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
+
+<!-- By Train Card with Toggle -->
+<div class="card" onclick="toggleTrainImage()">
+  <h3>🚆 By Train</h3>
+  <p>
+    <strong>Nearest Station:</strong> New Jalpaiguri (NJP) – 88 km<br>
+    <strong>Major Trains:</strong> Darjeeling Mail, Kamrup Express<br>
+    <strong>Travel Time:</strong> 3–4 hours by road
+  </p>
+</div>
+
+<!-- Hidden Train Image -->
+<div id="train-image-container" style="display: none; text-align: center; margin-top: 20px;">
+  <span onclick="toggleTrainImage()" style="cursor:pointer; color: white; background: red; padding: 5px 10px; border-radius: 5px;">❌ Close</span>
+  <br>
+  <img src="images/train.jpg" alt="Train to Darjeeling" class="card-image">
+</div>
+
+        <!-- Top Attractions -->
+        <section id="attractions" class="section">
+            <h2>Top Attractions in Darjeeling</h2>
+            <div class="card-grid">
+                <div class="attraction-card">
+                   <!-- Tiger Hill Card -->
+<div class="card" onclick="showImage('tiger-hill-img')">
+  <h3>🌄 Tiger Hill</h3>
+  <p>Famous for spectacular sunrise views over Kanchenjunga. Early morning visits (4:30 AM)...</p>
+</div>
+
+<!-- Hidden Image -->
+<div id="tiger-hill-img" class="popup-image">
+  <button onclick="closeImage('tiger-hill-img')" class="close-btn">❌ Close</button>
+  <img src="images/Tiger-Hill.jpg" alt="Tiger Hill">
+</div>
+
+                <!-- Railway Card -->
+<div class="card" onclick="showImage('railway-img')">
+  <h3>🚂 Darjeeling Himalayan Railway</h3>
+  <p>UNESCO World Heritage site featuring the famous "Toy Train"...</p>
+</div>
+
+<div id="railway-img" class="popup-image">
+  <button onclick="closeImage('railway-img')" class="close-btn">❌ Close</button>
+  <img src="images/train.jpg" alt="Toy Train">
+</div>
+
+               <!-- Tea Estate Card -->
+<div class="card" onclick="showImage('tea-img')">
+  <h3>🌿 Happy Valley Tea Estate</h3>
+  <p>Established in 1854, this working tea garden offers tours, tastings...</p>
+</div>
+
+<div id="tea-img" class="popup-image">
+  <button onclick="closeImage('tea-img')" class="close-btn">❌ Close</button>
+  <img src="images/tea.jpg" alt="Tea Estate">
+</div>
+                <!-- Batasia Loop -->
+<div class="card" onclick="showImage('batasia-img')">
+  <h3>🌸 Batasia Loop</h3>
+  <p>A famous spiral railway loop offering panoramic views of the Himalayas and a war memorial dedicated to Gorkha soldiers.</p>
+</div>
+
+<div id="batasia-img" class="popup-image">
+  <button onclick="closeImage('batasia-img')" class="close-btn">❌ Close</button>
+  <img src="images/batasia.jpg" alt="Batasia Loop">
+</div>
+
+<!-- Japanese Peace Pagoda -->
+<div class="card" onclick="showImage('pagoda-img')">
+  <h3>🎋 Japanese Peace Pagoda</h3>
+  <p>A serene white pagoda built for peace by Japanese monks. Offers a tranquil environment and a view of Mt. Kanchenjunga.</p>
+</div>
+
+<div id="pagoda-img" class="popup-image">
+  <button onclick="closeImage('pagoda-img')" class="close-btn">❌ Close</button>
+  <img src="images/pagoda.jpg" alt="Japanese Peace Pagoda">
+</div>
+
+<!-- Rock Garden -->
+<div class="card" onclick="showImage('rock-img')">
+  <h3>🌿 Rock Garden</h3>
+  <p>A beautifully terraced garden with waterfalls, flowerbeds, and rock sculptures — a perfect spot for relaxation and photos.</p>
+</div>
+
+<div id="rock-img" class="popup-image">
+  <button onclick="closeImage('rock-img')" class="close-btn">❌ Close</button>
+  <img src="images/rock.jpg" alt="Rock Garden">
+</div>
+
+
+       <section id="culture-section" style="padding: 50px 20px; background-color: #f4f4f4;">
+  <div style="max-width: 1200px; margin: auto; background-color: white; padding: 40px 20px; border-radius: 12px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);">
+    
+    <h2 style="text-align: center; margin-bottom: 40px; font-size: 2em; color: #333;">
+      🎭 Top Cultural Highlights in Darjeeling
+    </h2>
+
+    <div class="card-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+      
+      <!-- Major Festivals Card -->
+      <div class="card" style="background: #fff; color: #333; border-radius: 12px; padding: 20px; width: 300px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <h3>🎪 Major Festivals</h3>
+        <ul style="padding-left: 20px; line-height: 1.6;">
+          <li>Dashain (Oct) <a href="images/dashain.jpg" target="_blank">📸</a></li>
+          <li>Tihar (Nov) <a href="images/tihar.jpg" target="_blank">📸</a></li>
+          <li>Losar (Feb) <a href="images/losar.jpg" target="_blank">📸</a></li>
+          <li>Kali Puja (Oct/Nov) <a href="images/kalipuja.jpg" target="_blank">📸</a></li>
+          <li>Christmas (Dec) <a href="images/christmas.jpg" target="_blank">📸</a></li>
+        </ul>
+      </div>
+
+      <!-- Traditional Arts Card -->
+      <div class="card" style="background: #fff; color: #333; border-radius: 12px; padding: 20px; width: 300px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <h3>🎵 Traditional Arts</h3>
+        <ul style="padding-left: 20px; line-height: 1.6;">
+          <li>Folk Music <a href="images/folkmusic.jpg" target="_blank">📸</a></li>
+          <li>Dance: Maruni, Chyabrung <a href="images/dance.jpg" target="_blank">📸</a></li>
+          <li>Handicrafts <a href="images/handicrafts.jpg" target="_blank">📸</a></li>
+          <li>Architecture <a href="images/architecture.jpg" target="_blank">📸</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+        <!-- Food and Cuisine -->
+        <section id="food" class="section food-section">
+            <h2>Food and Cuisine</h2>
+            <div class="highlight-box">
+                <h3>🍜 Culinary Delights</h3>
+                <p>Darjeeling's cuisine reflects its multicultural heritage, offering a perfect blend of Nepali, Tibetan, Bengali, and British flavors.</p>
+            </div>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>🥟 Must-Try Local Dishes</h3>
+                    <ul class="styled-list">
+                        <li><strong>Momos:</strong> Steamed dumplings with various fillings</li>
+                        <li><strong>Thukpa:</strong> Hearty noodle soup perfect for cold weather</li>
+                        <li><strong>Gundruk:</strong> Fermented leafy vegetable curry</li>
+                        <li><strong>Sel Roti:</strong> Traditional ring-shaped rice bread</li>
+                        <li><strong>Churpi:</strong> Yak cheese, a local delicacy</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>🍵 Tea and Beverages</h3>
+                    <ul class="styled-list">
+                        <li><strong>Darjeeling Tea:</strong> World-famous black tea with muscatel flavor</li>
+                        <li><strong>Butter Tea:</strong> Traditional Tibetan tea with yak butter</li>
+                        <li><strong>Chyang:</strong> Traditional millet-based alcoholic beverage</li>
+                        <li><strong>Tongba:</strong> Fermented millet drink served hot</li>
+                        <li><strong>Milk Tea:</strong> Local-style spiced tea</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>🍽️ Popular Restaurants</h3>
+                    <ul class="styled-list">
+                        <li><strong>Glenary's:</strong> Famous bakery and restaurant since 1911</li>
+                        <li><strong>Keventers:</strong> Historic breakfast spot with mountain views</li>
+                        <li><strong>Kunga Restaurant:</strong> Authentic Tibetan cuisine</li>
+                        <li><strong>Sonam's Kitchen:</strong> Popular for breakfast and continental food</li>
+                        <li><strong>Gatty's Cafe:</strong> Modern cafe with international cuisine</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Adventure and Activities -->
+        <section id="adventure" class="section adventure-section">
+            <h2>Adventure and Activities</h2>
+            <div class="highlight-box">
+                <h3>🏔️ Thrilling Adventures</h3>
+                <p>From challenging treks to peaceful nature walks, Darjeeling offers adventures for every type of traveler.</p>
+            </div>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>🥾 Trekking</h3>
+                    <ul class="styled-list">
+                        <li><strong>Sandakphu Trek:</strong> Highest peak in West Bengal (3,636m)</li>
+                        <li><strong>Singalila Ridge Trek:</strong> Panoramic Himalayan views</li>
+                        <li><strong>Tiger Hill Trek:</strong> Early morning sunrise trek</li>
+                        <li><strong>Darjeeling-Mirik Trek:</strong> Easy trek through tea gardens</li>
+                        <li><strong>Tonglu Trek:</strong> Rhododendron forests and mountain views</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>🚵 Outdoor Activities</h3>
+                    <ul class="styled-list">
+                        <li><strong>Mountain Biking:</strong> Cycling through hill roads and trails</li>
+                        <li><strong>River Rafting:</strong> Teesta and Rangit rivers (seasonal)</li>
+                        <li><strong>Paragliding:</strong> Soaring over tea gardens and valleys</li>
+                        <li><strong>Rock Climbing:</strong> Natural rock formations for climbing</li>
+                        <li><strong>Nature Walks:</strong> Peaceful walks through forests and gardens</li>
+                    </ul>
+                </div>
+                <div class="card">
+<!-- Footer Section -->
+<footer style="background-color: #1a1a1a; color: white; padding: 20px;">
+  <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Tourism Footer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- Footer Start -->
+<footer>
+  <div id="make-payment" class="payment-box">
+            <!-- Payment Section -->
+            <div class="footer-section payment-section">
+                <h3 class="section-title">Make Payment</h3>
+                
+                <div class="qr-container">
+                    <div class="qr-placeholder">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB4PSIxMCIgeT0iMTAiIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iNjAiIHk9IjEwIiB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjEwIiB5PSI2MCIgd2lkdGg9IjMwIiBoZWlnaHQ9IjMwIiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI1MCIgeT0iNTAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iNzAiIHk9IjUwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjUwIiB5PSI3MCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwIiBmaWxsPSJibGFjayIvPgo8L3N2Zz4K" alt="QR Code">
+                    </div>
+                </div>
+                
+                <div class="payment-buttons">
+                    <button class="payment-btn" onclick="showPaymentForm('debit')">Debit Card</button>
+                    <button class="payment-btn" onclick="showPaymentForm('credit')">Credit Card</button>
+                </div>
+
+                <div class="payment-form" id="paymentForm">
+                    <div class="input-group">
+                        <label for="accountNumber">Account Number</label>
+                        <input type="text" id="accountNumber" placeholder="Enter your account number">
+                    </div>
+                    <div class="input-group">
+                        <label for="cvv">CVV</label>
+                        <input type="password" id="cvv" placeholder="Enter CVV">
+                    </div>
+                    <div class="input-group">
+                        <label for="amount">Payment Amount (₹)</label>
+                        <input type="number" id="amount" placeholder="Enter amount">
+                    </div>
+                    <button class="ok-btn" onclick="processPayment()">OK</button>
+                </div>
+
+                <div class="message" id="message"></div>
+            </div>
+        </div>
+
+        <footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>Contact Us</h4>
+            <p>Email: info@darjeelingtourism.com</p>
+            <p>Phone: +91 6390192247</p>
+            <p>Location: Darjeeling, West Bengal, India</p>
+        </div>
+<div class="header-container" style="flex-direction: column; align-items: center;">
+    <div class="logo">
+     
+    </div>
+
+    <!-- Centered Social Icons -->
+    <div class="social-icons" style="margin-top: 0.5rem; display: flex; justify-content: center; gap: 1rem;">
+        <a href="https://www.instagram.com" target="_blank" title="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/919876543210" target="_blank" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.facebook.com" target="_blank" title="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+    </div>
+</div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 | All rights reserved.</p>
+            <p>Made by <a href="#">Shobhit Singh</a></p>
+        </div>
+    </div>
+</footer>
+
+   
+
+    <!-- Receipt Overlay -->
+    <div class="receipt-overlay" id="receiptOverlay">
+        <div class="receipt">
+            <div class="close-timer" id="closeTimer">10</div>
+            <div class="receipt-header">
+                <div class="receipt-logo">🏔️ DARJEELING TOURISM</div>
+                <div class="receipt-subtitle">Official Payment Receipt</div>
+                <div class="receipt-number">Receipt #DT-2025-001</div>
+            </div>
+            
+            <div class="receipt-details">
+                <div class="receipt-row">
+                    <span class="receipt-label">Date:</span>
+                    <span class="receipt-value" id="receiptDate"></span>
+                </div>
+                <div class="receipt-row">
+                    <span class="receipt-label">Time:</span>
+                    <span class="receipt-value" id="receiptTime"></span>
+                </div>
+                <div class="receipt-row">
+                    <span class="receipt-label">Package:</span>
+                    <span class="receipt-value">Hotel + Transport</span>
+                </div>
+                <div class="receipt-row">
+                    <span class="receipt-label">Payment Method:</span>
+                    <span class="receipt-value" id="paymentMethod"></span>
+                </div>
+                <div class="receipt-row">
+                    <span class="receipt-label">Account Number:</span>
+                    <span class="receipt-value" id="receiptAccount"></span>
+                </div>
+                <div class="receipt-row">
+                    <span class="receipt-label">Amount Paid:</span>
+                    <span class="receipt-value">₹1500</span>
+                </div>
+                <div class="receipt-row">
+                    <span class="receipt-label">Status:</span>
+                    <span class="receipt-value" style="color: #27ae60;">✔ CONFIRMED</span>
+                </div>
+            </div>
+            
+            <div class="receipt-footer">
+                <div class="receipt-thank-you">Thank you for choosing Darjeeling Tourism!</div>
+                <div class="receipt-note">
+                    Your booking is confirmed. Please keep this receipt for your records.
+                    <br>Contact us: +91-8004829402 | info@darjeelingtourism.com,shobhitsinghssssss@gmail.com
+                </div>
+                
+                <div class="receipt-signature">
+                    <div class="signature-section">
+                        <div class="signature-line"></div>
+                        <div class="signature-name">Shobhit Singh</div>
+                        <div style="font-size: 0.85rem; color: #999;">Authorized Signatory</div>
+                    </div>
+                    <div style="text-align: right; font-size: 0.85rem; color: #999;">
+                        <div>Official Seal</div>
+                        <div style="border: 3px solid #3498db; border-radius: 50%; width: 55px; height: 55px; display: flex; align-items: center; justify-content: center; margin-top: 8px; font-weight: bold; color: #3498db; font-size: 1.2rem;">DT</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
